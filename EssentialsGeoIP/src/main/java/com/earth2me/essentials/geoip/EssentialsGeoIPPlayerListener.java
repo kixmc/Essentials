@@ -118,7 +118,7 @@ public class EssentialsGeoIPPlayerListener implements Listener, IConf {
             for (final Player onlinePlayer : player.getServer().getOnlinePlayers()) {
                 final User user = ess.getUser(onlinePlayer);
                 if (user.isAuthorized("essentials.geoip.show")) {
-                    user.sendMessage(tl("geoipJoinFormat", u.getDisplayName(), sb.toString()));
+                    user.sendMessage(tl("geoipJoinFormat", u.getDisplayName(), sb.toString().replace("United States", "The United States").replace("United Kingdom", "The United Kingdom")));
                 }
             }
         }
